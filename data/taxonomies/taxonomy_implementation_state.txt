@@ -1,0 +1,7 @@
+In force
+Planned
+Ended
+Draft
+Under review
+Unknown
+Superseded

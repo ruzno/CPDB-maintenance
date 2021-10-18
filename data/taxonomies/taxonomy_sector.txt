@@ -1,0 +1,34 @@
+For filter
+Agriculture and forestry
+Agricultural CH4
+Agricultural CO2
+Agricultural N2O
+Forestry
+Buildings
+Appliances
+Construction
+Heating and cooling
+Hot water and cooking
+Electricity and heat
+CCS
+Coal
+Gas
+Nuclear
+Oil
+Renewables
+General
+Industry
+Fluorinated gases
+Fossil fuel exploration and production
+Industrial energy related
+Industrial N2O
+Industrial process CO2
+Negative emissions
+Waste CH4
+Transport
+Air
+Heavy-duty vehicles
+Light-duty vehicles
+Low-emissions mobility
+Rail
+Shipping
