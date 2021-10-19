@@ -37,9 +37,11 @@ for i in range(len(list_variables)):
     sp_variable = sp_variable.str.split(",", expand=True)
     sp_variable = sp_variable.fillna('For filter')
 
+    # make sure no spaces in the beginning or end of the world exists
     for column in sp_variable:
        sp_variable[column] = sp_variable[column].str.strip()
 
+    # singles out error in the database
     error = pd.DataFrame()
 
     for j in sp_variable.columns:
@@ -48,10 +50,10 @@ for i in range(len(list_variables)):
 
     name = list_variables[i]
 
+    # exports error for each variable if there are any policies with mistakes
+    # NO EXPORT MEANS NO ERRORS
     if list_variables[i] == 'impact_indicator_name_of_impact_indicator':
-        error = error[~error['impact_indicator_name_of_impact_indicator'].isna()]
+          error = error[~error['impact_indicator_name_of_impact_indicator'].isna()]
 
-    error.to_csv('results/error_'+name+'.csv', index=False)
-
-
-
+    if not error.empty:
+        error.to_csv('results/error_'+name+'.csv', index=False)
