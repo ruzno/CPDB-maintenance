@@ -11,18 +11,22 @@ import pandas as pd
 
 # import database
 
-database_input = pd.read_csv(r'data/source_database_15102021.csv')
+database_input = pd.read_csv(r'data/source_database_25012022.csv')
 
 # variables to analyse
 # !! it is important that the variables and taxonomies are ordered the same way
 
-list_variables = ['policy_jurisdiction', 'policy_type_of_policy_instrument',
-                  'policy_sector_name', 'policy_type', 'policy_implementation_state',
-                  'policy_objective', 'impact_indicator_name_of_impact_indicator']
+list_variables = [
+    'policy_jurisdiction', 'policy_type_of_policy_instrument',
+    'policy_sector_name', 'policy_type', 'policy_implementation_state',
+    'policy_objective', 'impact_indicator_name_of_impact_indicator'
+]
 
-list_taxonomies = ['taxonomy_policy_jurisdiction.txt', 'taxonomy_policy_instrument.txt',
-                   'taxonomy_sector.txt', 'taxonomy_policy_type.txt', 'taxonomy_implementation_state.txt',
-                   'taxonomy_policy_objective.txt', 'taxonomy_impact_indicator.txt']
+list_taxonomies = [
+    'taxonomy_policy_jurisdiction.txt', 'taxonomy_policy_instrument.txt',
+    'taxonomy_sector.txt', 'taxonomy_policy_type.txt', 'taxonomy_implementation_state.txt',
+    'taxonomy_policy_objective.txt', 'taxonomy_impact_indicator.txt'
+]
 
 # this loops through all the variables above
 for i in range(len(list_variables)):
