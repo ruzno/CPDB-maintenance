@@ -8,6 +8,11 @@
 # Date:     June 2021
 # Contact:  l.nascimento@newclimate.org
 
+# ---
+# INPUT: climatepolicydatabase source .csv file
+# OUTPUT: results of this script are added the the folder results/datasets
+# ---
+
 # %% import packages
 
 import numpy as np
@@ -20,10 +25,6 @@ from functions.functions_policy_indicators import *
 
 # all data is available in the project folder
 policies_import = pd.read_csv('data/source_database_25012022.csv')
-
-# defines latest analysis year, this refers to policy adoption cut-off dates
-range_end = 2021
-range_start = 1990
 
 # creates a copy so changes can be compared to the import
 df_temp = policies_import.copy(deep=True)
