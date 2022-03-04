@@ -7,6 +7,11 @@
 # Date:     October 2021
 # Contact:  l.nascimento@newclimate.org
 
+# ---
+# INPUT: climatepolicydatabase source .csv file
+# OUTPUT: results of this script are added the the folder results/
+# ---
+
 import pandas as pd
 
 # import database
