@@ -1165,3 +1165,23 @@ def add_sec(dataframe):
         r"Agricultural\s+N2O|"
         r"Agricultural\s+CO2")
     return dataframe
+
+# This function adds the mitigation areas to the argument dataframe
+
+def add_mit(dataframe):
+    dataframe['Energy service demand reduction and resource efficiency'] = dataframe['policy_type'].str.contains(
+        "Energy service demand reduction and resource efficiency")
+
+    dataframe['Energy efficiency'] = dataframe['policy_type'].str.contains(
+        "Energy efficiency")
+
+    dataframe['Renewables'] = dataframe['policy_type'].str.contains(
+        "Renewables")
+
+    dataframe['Non-energy use'] = dataframe['policy_type'].str.contains(
+        "Non-energy use")
+
+    dataframe['Other low-carbon'] = dataframe['policy_type'].str.contains(
+        "fuel switch")
+
+    return dataframe

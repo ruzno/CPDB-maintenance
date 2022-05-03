@@ -124,6 +124,10 @@ df_temp = add_policy_options(df_temp)
 # this step extracts information from the 'sector name'
 df_temp = add_sec(df_temp)
 
+# creates boolean mitigation area columns
+# this step extracts information from the 'policy_type'
+df_temp = add_mit(df_temp)
+
 # calculates fuzziness for each individual policy
 df_temp = add_f(df_temp)
 
