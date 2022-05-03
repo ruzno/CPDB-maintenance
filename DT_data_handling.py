@@ -24,10 +24,12 @@ from functions.functions_policy_indicators import *
 # %% import data and define period of analysis
 
 # all data is available in the project folder
-policies_import = pd.read_csv('data/source_database_25012022.csv')
+policies_import = pd.read_csv('data/source_database_03052022.csv', encoding='latin1')
 
 # creates a copy so changes can be compared to the import
 df_temp = policies_import.copy(deep=True)
+
+range_end = 2021
 
 # %% DATA CLEANING
 
@@ -49,7 +51,7 @@ df_temp = df_temp.drop(columns=['policy_title', 'policy_name',
 df_temp = df_temp[
     (df_temp['policy_jurisdiction'] == 'Country') &
     (df_temp['policy_type_of_policy_instrument'].notnull()) &
-    (df_temp['policy_date_of_decision'].str.isnumeric()) &
+    (~df_temp['policy_date_of_decision'].isna()) &
     (df_temp['policy_sector_name'].notnull())]
 
 # %% DATA PREPARATION
