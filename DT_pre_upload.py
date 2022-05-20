@@ -16,7 +16,7 @@ import pandas as pd
 
 # import database
 
-database_input = pd.read_csv(r'data/source_database_25012022.csv')
+database_input = pd.read_csv(r'data/source_database_20052022.csv', encoding='latin1')
 
 # variables to analyse
 # !! it is important that the variables and taxonomies are ordered the same way

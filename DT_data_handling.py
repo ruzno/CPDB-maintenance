@@ -135,13 +135,19 @@ df_temp = add_f(df_temp)
 df_temp = add_sp(df_temp)
 
 # changes column types
-list_boolean_columns = ['GeneralSector', 'ElectricitySector',
+list_boolean_columns = ['DirectInvestment',
+                        'FiscalFinancialIncentives', 'Market-basedInstruments',
+                        'CodesStandards', 'OtherRegulatoryInstruments', 'RDD',
+                        'InformationEducation', 'PolicySupport', 'VoluntaryApproaches',
+                        'BarrierRemoval', 'ClimateStrategy', 'Target', 'g1', 'g2', 'g3', 'g4',
+                        'g5', 'g6', 'g7', 'eh1', 'eh2', 'eh3', 'eh4', 'eh5', 'eh6', 'eh7',
+                        'eh8', 'eh9', 'eh10', 'i1', 'i2', 'i3', 'i4', 'i5', 'i6', 'i7', 'i8',
+                        'i9', 'i10', 'i11', 'i12', 'i13', 'i14', 'b1', 'b2', 'b3', 'b4', 'b5',
+                        'b6', 'lt1', 'lt2', 'lt3', 'lt4', 'lt5', 'lt6', 'lt7', 'af1', 'af2',
+                        'af3', 'af4', 'af5', 'af6', 'GeneralSector', 'ElectricitySector',
                         'IndustrySector', 'BuildingsSector', 'TransportSector', 'LandSector',
-                        'DirectInvestment', 'FiscalFinancialIncentives',
-                        'Market-basedInstruments', 'CodesStandards',
-                        'OtherRegulatoryInstruments', 'RDD', 'InformationEducation',
-                        'PolicySupport', 'VoluntaryApproaches', 'BarrierRemoval',
-                        'ClimateStrategy', 'Target']
+                        'Energy service demand reduction and resource efficiency',
+                        'Energy efficiency', 'Renewables', 'Non-energy use', 'Other low-carbon']
 
 for col in list_boolean_columns:
     df_temp[col] = df_temp[col].astype(bool)
