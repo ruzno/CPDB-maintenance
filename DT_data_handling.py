@@ -24,7 +24,7 @@ from functions.functions_policy_indicators import *
 # %% import data and define period of analysis
 
 # all data is available in the project folder
-policies_import = pd.read_csv('data/source_database_03052022.csv', encoding='latin1')
+policies_import = pd.read_csv('data/source_database_08062022.csv', encoding='latin1')
 
 # creates a copy so changes can be compared to the import
 df_temp = policies_import.copy(deep=True)
