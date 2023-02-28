@@ -9,14 +9,14 @@
 
 # ---
 # INPUT: climatepolicydatabase source .csv file
-# OUTPUT: results of this script are added the the folder results/
+# OUTPUT: results of this script are added to the folder results/
 # ---
 
 import pandas as pd
 
 # import database
 
-database_input = pd.read_csv(r'data/source_database_08062022.csv', encoding='latin1')
+database_input = pd.read_csv(r'data/ClimatePolicyDatabase_v2023.csv', encoding='latin1')
 
 # variables to analyse
 # !! it is important that the variables and taxonomies are ordered the same way

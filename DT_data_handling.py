@@ -10,7 +10,7 @@
 
 # ---
 # INPUT: climatepolicydatabase source .csv file
-# OUTPUT: results of this script are added the the folder results/datasets
+# OUTPUT: results of this script are added to the folder results/datasets
 # ---
 
 # %% import packages
@@ -24,12 +24,12 @@ from functions.functions_policy_indicators import *
 # %% import data and define period of analysis
 
 # all data is available in the project folder
-policies_import = pd.read_csv('data/source_database_08062022.csv', encoding='latin1')
+policies_import = pd.read_csv('data/ClimatePolicyDatabase_in_progress.csv', encoding='latin1')
 
 # creates a copy so changes can be compared to the import
 df_temp = policies_import.copy(deep=True)
 
-range_end = 2021
+range_end = 2022
 
 # %% DATA CLEANING
 
@@ -153,4 +153,4 @@ for col in list_boolean_columns:
     df_temp[col] = df_temp[col].astype(bool)
 
 policies_tidy_clean: DataFrame = df_temp.copy(deep=True)
-policies_tidy_clean.to_csv(r'results/datasets/treated_policy_database.csv', index=False)
+policies_tidy_clean.to_csv(r'results/datasets/202303_treated_policy_database.csv', index=False)
